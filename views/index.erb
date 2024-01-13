@@ -10,13 +10,17 @@
   </head>
   <body>
     <h1 class="title">ジュリア集合</h1>
-    <h2> <%= @number %></h2>
     <form id="form-julia">
-      <input type='text' id='input-minx' name="minx">
-      <input type='text' id='input-maxx' name="maxx"><br>
-      <input type='text' id='input-miny' name="miny">
-      <input type='text' id='input-maxy' name="maxy"><br>
-      <input type='text' id='input-comp-const' name="complex">
+      <label name="minx">実数部最小値</label>
+      <input type='text' id='input-minx' value="-1.5" name="minx">
+      <label name="maxx">実数部最大値</label>
+      <input type='text' id='input-maxx' value="1.5" name="maxx"><br>
+      <label name="miny">虚数部最小値</label>
+      <input type='text' id='input-miny' value="-1.5" name="miny">
+      <label name="maxy">虚数部最大値</label>
+      <input type='text' id='input-maxy' value="1.5" name="maxy"><br>
+      <label name="complex">複素定数</label>
+      <input type='text' id='input-comp-const' value="0.25+0.57i" name="complex">
       <button id='button' type="submit">送信</button>
     </form>
     <canvas id="julia-canvas" width="600" height="600"></canvas>
