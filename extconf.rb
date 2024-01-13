@@ -1,2 +1,2 @@
 require 'mkmf'
-create_makefile("calcurate_julia")
+create_makefile("julia")
