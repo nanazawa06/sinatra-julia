@@ -16,7 +16,7 @@ get '/satori/julia/api' do
     min_y = Float(params[:min_y])
     max_y = Float(params[:max_y])
   rescue ArgumentError
-    halt 400, {error: 'Bad Request', message: '最大最小値には整数もしくは少数を入力してください'}.to_json
+    halt 400, {error: 'Bad Request', message: '最大最小値には整数もしくは小数を入力してください'}.to_json
   end
 
   begin
