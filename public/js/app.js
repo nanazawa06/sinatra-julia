@@ -18,7 +18,7 @@ $(document).ready(function (){
         // 各ピクセルに色を指定
         for (let x = 0; x < CanvasWidth; x++) {
           for (let y = 0; y < CanvasHeight; y++) {
-            Ctx.fillStyle = `rgb(${Data[x * CanvasHeight + y]}, 0, 0)`;
+            Ctx.fillStyle = `hsl(${Data[x * CanvasHeight + y]}, 100%, 50%)`;
             Ctx.fillRect(x, y, 1, 1);
           }
         }
