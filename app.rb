@@ -5,11 +5,11 @@ require 'sinatra/reloader'
 require './ext/julia/julia'
 require 'json'
 
-get '/' do
+get '/satori/julia' do
   erb :index
 end
 
-get '/satori/julia' do
+get '/satori/julia/api' do
   begin
     min_x = Float(params[:min_x])
     max_x = Float(params[:max_x])
