@@ -6,6 +6,7 @@ $(document).ready(function (){
 
   $("#form-julia").submit(function(e) {
     e.preventDefault();
+    $(".error").remove();
     const FormData = $(this).serialize();
     $.ajax({
       type: 'GET',
@@ -22,8 +23,10 @@ $(document).ready(function (){
           }
         }
       },
-      error: function(error) {
-        console.log('Error: ', error);
+      error: function(xhr) {
+        const Err = JSON.parse(xhr.responseText);
+        const ErrMessage = $(`<p class='error'>${Err.message}</p>`);
+        $("#form-julia").after(ErrMessage);
       }
     })
   });
