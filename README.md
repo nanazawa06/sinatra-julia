@@ -18,9 +18,22 @@ C拡張の引数では複素定数を実数部と虚数部でそれぞれ受け�
 　終わってみると、sinatraやC拡張、画像の描画等について勉強になってよかったと思っています。
 
 環境構築
+docker を使用する場合
 プロジェクトのルートディレクトリで
 $ docker compose build
 $ docker compose up -d
+
+dockerを使用しない場合(ruby 3.1.4)
+プロジェクトのルートディレクトリで
+$ RUN gem install bundler && bundle install
+$ bundle exec rackup --host 0.0.0.0 -p 8080
+
+C拡張を再ビルドが必要な場合は
+ext/juliaディレクトリで
+$ make clean
+$ rm Makefile
+$ ruby extconf.rb
+$ make
 
 開発環境
 言語・フレームワーク
@@ -32,3 +45,4 @@ $ docker compose up -d
 インフラ
 -puma 6.4.1
 -Docker 24.0.7
+-wsl Ubuntu 20.04
