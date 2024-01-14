@@ -3,9 +3,9 @@
 
 #define WIDTH 600
 #define HEIGHT 600
-#define MAX_ITER 50
-#define MAX_K 100
-#define VARIATION 10
+#define MAX_ITER 100
+#define MAX_K 200
+#define VARIATION 5
 
 // ジュリア集合の計算、各ピクセルの配色データを持つ配列を作成
 static VALUE

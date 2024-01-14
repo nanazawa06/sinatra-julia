@@ -2,7 +2,7 @@
 
 require 'sinatra'
 require 'sinatra/reloader'
-require './julia'
+require './ext/julia/julia'
 require 'json'
 
 get '/' do
