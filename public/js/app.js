@@ -10,7 +10,7 @@ $(document).ready(function (){
     const FormData = $(this).serialize();
     $.ajax({
       type: 'GET',
-      url: '/satori/julia',
+      url: '/satori/julia/api',
       data: FormData,
       success: function(res) {
         const Data = JSON.parse(res);
